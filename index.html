@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<title>Afford Life - Duke University FCU</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/main.css?v=1">
+	<script src="js/head.js"></script>
+</head>
+<body>
+	<main class="container">
+		
+		<header>
+			<img src="img/header.png" class="header">
+		</header>
+		
+		<div class="wrap">
+			
+
+			<div class="tool group">
+				<a href="https://www.loanliner.com/LoanRequest/CLPPresenter/LoanList.aspx?CUID=03203668&LoanListId=777&ChannelId=2903987303195131723&LocationId=5869857303189165533&IsFramed=F" class="btn apply" onClick="_gaq.push(['_trackEvent', 'Apply', 'Click', 'Clicked Apply Button']);"><span>Apply Now!</span></a>
+				<h4 class="intro pad">Tell us about your loans and we’ll show you how much you can save to afford your life!</h4>
+
+				<div class="loan-auto calculator bg-blue">
+					<div class="fourty">
+						<img src="img/rate-auto.png">
+					</div>
+					<div class="thirty">
+						<p><label for="amount">your current balance</label><input type="text" placeholder="7,500" class="amount" /></p>
+						<p><label for="rate">your current rate</label><input type="text" placeholder="8.99" class="rate percent" /></p>
+						<input type="hidden" class="rate_compare" value="1.99" />
+					</div>
+					<div class="thirty">
+						<p><label for="term">your current term</label>
+							<select class="term">
+								<option value="12m">12 mo.</option>
+								<option value="24m">24 mo.</option>
+								<option value="36m">36 mo.</option>
+								<option value="48m">48 mo.</option>
+								<option value="60m">60 mo.</option>
+								<option value="72m">72 mo.</option>
+								<option value="84m">84 mo.</option>
+							</select>
+						</p>
+					</div>
+					<div class="group"></div>
+				</div>
+
+				<div class="credit calculator bg-teal">
+					<div class="fourty">
+						<img src="img/rate-credit.png">
+					</div>
+					<div class="thirty">
+						<p><label for="amount">your current balance</label><input type="text" placeholder="3,500" class="amount" /></p>
+						<p><label for="rate">your current rate</label><input type="text" placeholder="14.5" class="rate percent" /></p>
+						<input type="hidden" class="term" value="12m" />
+						<input type="hidden" class="rate_compare" value="9.9" />
+					</div>
+					<div class="group"></div>
+				</div>
+				
+				<div class="loan-personal calculator bg-lime">
+					<div class="fourty">
+						<img src="img/rate-personal.png">
+					</div>
+					<div class="thirty">
+						<p><label for="amount">your current balance</label><input type="text" placeholder="7,500" class="amount" /></p>
+						<p><label for="rate">your current rate</label><input type="text" placeholder="10.5" class="rate percent" /></p>
+						<input type="hidden" class="rate_compare" value="8.95" />
+					</div>
+					<div class="thirty">
+						<p><label for="term">your current term</label>
+							<select class="term">
+								<option value="12m">12 mo.</option>
+								<option value="24m">24 mo.</option>
+								<option value="36m">36 mo.</option>
+								<option value="48m">48 mo.</option>
+								<option value="60m">60 mo.</option>
+							</select>
+						</p>
+					</div>
+					<div class="group"></div>
+				</div>
+
+				<button class="calculate"><span>Show me</span> the savings!</button>
+
+			</div>
+
+			<div class="results">
+
+				<h2>Congratulations!</h2>
+				<p class="larger">You could save up to <strong>$<span class="result total"></span></strong>.</p>
+				<p>Save up to <strong>$<span class="result loan-auto"></span></strong> on your <strong>Auto Loan</strong>.</p>
+				<p>Save up to <strong>$<span class="result credit"></span></strong> on your <strong>Credit Card</strong>.</p>
+				<p>Save up to <strong>$<span class="result loan-personal"></span></strong> on your <strong>Personal Loan</strong>.</p>
+				<p>Additional savings may be possible! Contact us for details.</p>
+				<div class="text-center pad">
+					<a href="https://www.loanliner.com/LoanRequest/CLPPresenter/LoanList.aspx?CUID=03203668&LoanListId=777&ChannelId=2903987303195131723&LocationId=5869857303189165533&IsFramed=F" class="btn apply" onClick="_gaq.push(['_trackEvent', 'Apply', 'Click', 'Clicked Apply Button']);">I'm Ready!<span>Apply Now!</span></a>
+					<a class="btn go-back">&laquo; go back</a>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="footer-bar group">
+			<div class="wrap">
+
+				<div class="half separator">
+					<a href="https://dukefcu.org/"><img src="img/logo.png"></a>
+				</div>
+				<div class="half">
+					<h2>(919) 684-6704</h2>
+					<h3><a href="https://dukefcu.org">dukefcu.org</a></h3>
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="fine-print group wrap">
+			*APR= Annual Percentage Rate. Rates are subject to change and to credit approval. 1.99% APR is available on auto loans for 36 months or less and auto must be eight years old or newer. Limited time offer. Rate and promotion are subject to change at any time. See credit union for details. Loan Calculator based on best scenario. Your savings may be different depending on your unique situation and creditworthiness. Duke Credit Union is insured by the National Credit Union Administration.
+		</div>
+
+	</main>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
