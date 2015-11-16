@@ -25,7 +25,7 @@ $(function(){
 
 
 	var calculate = function() {
-		
+
 		var interest_rate_cc = .28;
 		var interest_rate_loan = .0599;
 
@@ -44,6 +44,7 @@ $(function(){
 
 		var interest_savings = ( Math.ceil( ( interest_cc - interest_loan ) * 100 ) / 100 ).toFixed(2);
 
+		$('.loan-total').html( loan_total );
 		$('.payment-weekly').html( "$" + weekly );
 		$('.payment-bi-weekly').html( "$" + bi_weekly );
 		$('.payment-monthly').html( "$" + monthly );
