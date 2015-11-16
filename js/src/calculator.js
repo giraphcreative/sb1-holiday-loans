@@ -57,5 +57,7 @@ $(function(){
 
 	$(".number-of-gifts, .amount-per-gift").on( 'keyup', calculate );
 
+	$(".container").fitVids();
+
 });
 
