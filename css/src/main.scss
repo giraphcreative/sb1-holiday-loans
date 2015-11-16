@@ -132,8 +132,9 @@ h1 {
 // button styles
 input[type=submit], button, .btn {
 	@include font-title;
-	padding: 20px 40px 20px 20px;
-	background: $red;
+	padding: 20px 60px 20px 20px;
+	background: $red url(../img/bg-button-snowflake.png) left center no-repeat;
+	background-size: contain;
 	color: white;
 	border: 0;
 	border-radius: 8px;
@@ -144,16 +145,24 @@ input[type=submit], button, .btn {
 	text-align: center;
 	position: relative;
 	margin: 10px auto;
+	display: block;
+	width: 100%;
 	box-shadow: 3px 3px 25px lighten( $grey, 35% );
-	
+
 	&:after {
 		content: "";
 		position: absolute;
-		right: 5px;
 		top: 50%;
-		width: 30px;
-		height: 30px;
+		right: 0;
 		margin-top: -15px;
+		height: 30px;
+		width: 50px;
+		background: url(../img/button-arrow.png) center center no-repeat;
+	}
+	
+	@include respond-to( 500px ) {
+		display: inline-block;
+		width: auto;
 	}
 
 	&:hover {
