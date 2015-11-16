@@ -12,12 +12,12 @@ body {
 }
 
 a {
-	color: $blue;
+	color: $red;
 	text-decoration: none;
 	cursor: pointer;
 
 	&:hover {
-		color: lighten( $blue, 10% );
+		color: lighten( $red, 10% );
 	}
 }
 
