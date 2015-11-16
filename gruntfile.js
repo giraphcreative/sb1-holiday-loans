@@ -53,7 +53,7 @@ module.exports = function(grunt) {
                 files: {
                     '<%= jsDir %>/main.js': [
                         '<%= jsLibDir %>/jquery.min.js',
-                        '<%= jsLibDir %>/accrue/jquery.accrue.js',
+                        '<%= jsLibDir %>/fitvids/jquery.fitvids.js',
                         '<%= jsSrcDir %>/*.js',
                     ],
                     '<%= jsDir %>/head.js': [
