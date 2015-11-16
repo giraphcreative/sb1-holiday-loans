@@ -3,9 +3,10 @@
 // color variables
 $grey: #414042;
 $blue: #214099;
-$teal: #1F7FC3;
+$teal: #00AEEF;
 $green: #66BD5A;
 $lime: #CADD65;
+$red: #ED4324;
 
 
 @import "reset";
@@ -24,6 +25,8 @@ $lime: #CADD65;
 .container {
 	background: white;
 	padding-bottom: 40px;
+	max-width: 800px;
+	margin: 0 auto;
 
 	@include respond-to( 1220px ) {
 		padding-bottom: 20px;
@@ -43,122 +46,105 @@ header {
 }
 
 
-// wrap div
-.wrap {
-	max-width: 1100px;
-	margin: 0 auto;
-	position: relative;
-	@include clearfix;
+h1 {
+	background: $teal;
+	padding: 15px;
+	font-size: 35px;
+	line-height: 35px;
+	color: white;
+	text-align: center;
+	@include font-title;
 }
-
 
 
 // padding div that'll resize for larger screens.
 .pad {
-	padding: 30px 20px;
-
-	@include respond-to( 768px ) { padding: 30px 50px; }
-	@include respond-to( 1025px ) { padding: 40px 70px; }
+	padding: 20px 30px;
 }
-
-
-
-// colors
-.bg-blue { background: $blue; }
-.bg-teal { background: $teal; }
-.bg-green { background: $green; }
-.bg-lime { background: $lime; }
-
 
 
 // tool styles
 .tool {
-	padding: 0;
+	@include font-title-light;
+	background: $red url(../img/bg-snowflakes.png) center center no-repeat;
+	background-size: cover;
 	text-align: center;
+	color: white;
 	
-	@include respond-to( 768px ) {
-		padding: 20px 40px;
+	p {
+		position: relative;
 	}
 
-	.calculator {
-		color: white;
-		padding: 10px 15px 10px;
-		@include font-title;
+	input[type=text] {
+		max-width: 20%;
+	}
 
-		button, input[type=submit], .btn {
-			width: 100%;
-			margin: 0 auto;
+	h4 {
+		@include font-title-light;
+	}
+
+	@include respond-to( 740px ) {
+		padding: 60px 60px 60px 250px;
+
+		.num-gifts:before {
+			content: "";
+			position: absolute;
+			left: -130px;
+			top: -70px;
+			width: 350px;
+			height: 200px;
+			background: url(../img/gift.png) center center no-repeat;
+			background-size: contain;
 		}
-		
-		@include respond-to( 768px ) { 
-			margin-top: 30px;
-			border-radius: 20px;
-			font-size: 1.2em;
 
-			img {
-				margin-top: 20px;
-			}
+		.cost-gift:before {
+			content: "";
+			position: absolute;
+			left: -50px;
+			top: -20px;
+			width: 270px;
+			height: 100px;
+			background: url(../img/dollar.png) center center no-repeat;
+			background-size: contain;
 		}
 	}
 }
-
 
 
 // results styles
 .results {
-	display: none;
-	text-align: center;
+	@include font-title-light;
 	@extend .pad;
-
-	// large title
-	h2 {
-		@include font;
-		font-size: 1.8em;
-
-		@include respond-to( 768px ) {
-			font-size: 3em;
-			padding: 10px 20px;
-		}
-	}
-
-	p {
-		font-size: 1.2em;
-
-		strong {
-			font-size: 1.4em;
-		}
-
-		&.larger {
-			font-size: 1.4em;
-		}
+	text-align: center;
+	padding-bottom: 40px;
+	
+	h3 {
+		padding: 25px;
 	}
 }
 
+
+.text-red {
+	color: $red;
+}
 
 
 // button styles
 input[type=submit], button, .btn {
 	@include font-title;
-	padding: 15px;
-	background: $green;
+	padding: 20px 40px 20px 20px;
+	background: $red;
 	color: white;
 	border: 0;
-	border-radius: 10px;
-	font-size: 2em;
-	line-height: 1.4em;
-	text-transform: uppercase;
-	display: block;
-	width: 90%;
+	border-radius: 8px;
+	border: 3px solid white;
+	font-size: 24px;
+	line-height: 30px;
 	cursor: pointer;
 	text-align: center;
 	position: relative;
 	margin: 10px auto;
 	box-shadow: 3px 3px 25px lighten( $grey, 35% );
-
-	span {
-		display: block;
-		font-size: 1.4em;
-	}
 	
 	&:after {
 		content: "";
@@ -174,70 +160,45 @@ input[type=submit], button, .btn {
 		opacity: .9;
 		color: white;
 	}
-
-	&.go-back {
-		background: lighten( $grey, 20% );
-		font-size: 1.5em;
-		color: white;
-	}
-
-	&.calculate, &.apply {
-		background: $green url(../img/bg-button-gradient.png) bottom center repeat-x;
-	}
-
-	@include respond-to( 768px ) {
-		max-width: 40%;
-		margin: 30px auto;
-	}
 }
-
 
 
 // footer styles
 .footer-bar {
-	background: $blue;
-	padding: 20px;
 	text-align: center;
 
-	&, a {
-		color: white;
-	}
-
 	h2, h3 {
-		@include font;
+		@include font-title;
+		margin: 0;
 	}
 
 	h2, a {
-		font-size: 2.4em;
+		font-size: 40px;
 		line-height: 50px;
 		text-transform: uppercase;
+		color: black;
 	}
 
-	h4 {
-		font-size: 17px;
-		@include respond-to( 800px ) { font-size: 26px; }
+	h3 {
+		font-size: 30px;
+		line-height: 40px;
 	}
 
 	.sixty, .fourty {
 		text-align: center;
 	}
 
-	@include respond-to( 768px ) {
-		margin-top: 30px;
-	}
-
-	.half.separator {
-		@include respond-to( 768px ) {
-			width: 46.5%;
-		}
+	.sixty {
+		margin-top: 40px;
+		padding: 20px;
+		border-left: 3px solid $teal;
 	}
 }
 
 
-
 .fine-print {
 	background: white;
-	padding: 20px 0 0;
+	padding: 20px;
 	font-size: .85em;
 	line-height: 1.3em;
 	text-align: left;

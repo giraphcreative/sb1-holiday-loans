@@ -1,9 +1,9 @@
 
 body {
 	@include font;
-	font-size: 85%;
-	line-height: 1.5em;
-	color: $blue;
+	font-size: 22px;
+	line-height: 28px;
+	color: darken( $grey, 20% );
 	background-color: #eee;
 	
 	@include respond-to( 1024px ) {
@@ -29,32 +29,31 @@ h1, h2, h3, h4, h5, h6, p {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 	line-height: 1.2em;
+	@include font-title-light;
+
+	span {
+		@include font-title;
+	}
 }
 
 h1 {
-	font-size: 1.7em;
-	@include font;
+	font-size: 38px;
+	line-height: 45px;
 }
 
 h2 {
-	font-size: 1.5em;
+	font-size: 35px;
+	line-height: 40px;
 }
 
 h3 {
-	font-size: 1.3em;
-	line-height: 1.2em;
-
-	&.caps {
-		text-transform: uppercase;
-		padding-top: 50px;
-	}
-
+	font-size: 30px;
+	line-height: 36px;
 }
 
 h4 {
-	font-size: 1.3em;
-	line-height: 1.3em;
-	@include font;
+	font-size: 25px;
+	line-height: 30px;
 }
 
 strong {
@@ -62,25 +61,17 @@ strong {
 }
 
 input[type=text], select {
-	display: block;
-	width: 100%;
 	padding: 14px 20px;
 	border: 0;
 	font-size: 20px;
 	line-height: 20px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
 	-webkit-appearance: none;
 	background: white;
+	text-align: center;
 
 	&.amount {
 		background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeBAMAAACcf1DPAAAAIVBMVEUAAACkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKT7b4aZAAAACnRSTlMAm4ApQMYQ3W1QNQOf6wAAAIRJREFUKM9joA3gVMMlw7qEZJmkqlXLG7BJsFWtWrVKAJsM46pKl4kTsMlwrXLAYQ3XchCJXY8BkMRuz6IE7DLMq1YtxKErESiFQ5fRqlUBOKxiWrUYl/ukFuGS6cIpE4VVhiOBgQO7PVarQnGEddcqoH+w2sGiGLXQgHrpgIHZjYGWAADGBCLRA4y1vAAAAABJRU5ErkJggg==') left center no-repeat;
 		padding: 14px 0 14px 30px;
-	}
-
-	&.percent {
-		background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeBAMAAACcf1DPAAAAJ1BMVEUAAACkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKRvW9ciAAAADHRSTlMAOZbGgBBY7NlwILNagw7UAAAAyUlEQVQoz9XPrw6CUBgF8KOIzj9BOoHNzUSwslmMTgIm5mYwGgg+gFEbwQcw+AAEHoAgfwRk56GUKN98AE64N/x273c+tCBHXupLfzehSzIEVF6bEpTaMgfGnDbFrjBJAS8TY8wnlBIjLoREXymg8CHEfmGQws4hoifOPesw3M3mDVFY8OQWW580fkU1mTpmrNA6ix81p09DTzAoILIv4cXoUkoUw47Rk82HvP15E6R1ebhyjl8BY1oU3Xo8AGq9j5B1ffY3K7QgHxSbQJgYtVbrAAAAAElFTkSuQmCC') right center no-repeat;	
 	}
 
 }
