@@ -4,6 +4,3 @@
 [submodule "js/lib/shiv"]
 	path = js/lib/shiv
 	url = https://github.com/aFarkas/html5shiv.git
-[submodule "js/lib/accrue"]
-	path = js/lib/accrue
-	url = https://github.com/jpederson/Accrue.js.git
