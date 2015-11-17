@@ -33,6 +33,15 @@ $(function(){
 		var cost_of_gifts = parseFloat( $('.amount-per-gift').val() );
 		var loan_total = number_of_gifts * cost_of_gifts;
 
+		if ( loan_total > 2500 ) {
+			loan_total = 2500;
+			$('.less-than-2500').hide();
+			$('.more-than-2500').show();
+		} else {
+			$('.less-than-2500').show();
+			$('.more-than-2500').hide();
+		}
+
 		var weekly = ( Math.ceil( pmt( interest_rate_loan/52, 52, loan_total, null, null ) * -100 ) / 100 ).toFixed(2);
 		var bi_weekly = ( Math.ceil( pmt( interest_rate_loan/26, 26, loan_total, null, null ) * -100 ) / 100 ).toFixed(2);
 		var monthly = ( Math.ceil( pmt( interest_rate_loan/12, 12, loan_total, null, null ) * -100 ) / 100 ).toFixed(2);

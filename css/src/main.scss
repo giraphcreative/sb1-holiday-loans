@@ -120,6 +120,19 @@ h1 {
 	
 	h3 {
 		padding: 25px;
+		@include font-title-light;
+
+		span {
+			@include font-title-light;
+
+			span {
+				@include font-title;
+			}
+		}
+	}
+
+	.more-than-2500 {
+		display: none;
 	}
 }
 
